@@ -1,0 +1,40 @@
+==============================================================================
+LAUNCHING THE APPLICATION:
+==============================================================================
+- To launch this application, please run the Main class in the boot folder.
+- Please note that the application saves using a .ser file.
+- The name of the file will be serfileentities.<CLASS NAME>.ser in the root of the project directory.
+- Please make sure that read/write access is available on this computer, or you may get a message indicating an IOException.
+
+==============================================================================
+RUNNING THE APPLICATION:
+==============================================================================
+- The application requires you to register, and login.
+- To navigate the menu, please use the numeric options, and type "exit" if you would like to move back up a level.
+- To conduct trades, there must be another user you can trade with, who has items that are approved. You can add an item under the menu 1. Inventory
+- Items will not show up in available items until an administrator has approved them in the menu. The first registered user is an admin and can approve items.
+- You can approve items under the menu 4. Admin.
+- We have included a Ser Reader, which you can run to see the state of the "Database".
+
+==============================================================================
+TRADING:
+==============================================================================
+- To create a one-way trade, there must be a user whose item you can borrow. You also must not have borrowed more than you have lent.
+- To create a two-way trade, the user whose item you are seeking to borrow must have one of your items on his or her wishlist, so that you can swap his item for yours.
+
+- Once a trade is initiated by one user, the other user can edit or agree to a meeting under the menu 3. Transactions
+- Once the meeting has been conducted in real life, both user can "confirm" under "Confirm meeting".
+
+==============================================================================
+DESIGN NOTES:
+==============================================================================
+-   Most classes (whose instances we only need one of) are instantiated in the Container class.
+    This allows us to manage dependencies (and swap out implementations) via dependency injection easily.
+    It also aids in mocking objects during testing. It also gives packages an easy "hook" into the application.
+-   We apply dependency inversion and let all use case classes depends on "PersistenceInterface".
+    In Phase 1, we have chosen SerPersistenceGateway as the concrete implementation of persistence.
+-   We have an event handler that handles "global events" that many use-case classes/controllers need to be aware of, such as the change in authenticated user,
+    a new registered user, or a change in the system configuration done by the administrator. This allows for convenient decoupling of all the classes.
+-   We implement object oriented querying in the ItemFetcher, since it is one of the more complicated use-case classes. For example, with the query fetcher, we can write:
+    query().onlyApproved().onlyOwnedBy(5).heldByOwner().getNames();
+    which will give us the item names of the items that are approved by the admin, owned by user 5, which have not been traded.
