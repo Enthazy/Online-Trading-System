@@ -2,21 +2,27 @@
 This is the course project for CSC207 in University of Toronto.
 
 
-==============================================================================<br>
+==============================================================================
+
 INTRODUCTION
-==============================================================================<br>
+
+==============================================================================
 - This is a web application that relies on the spring-boot framework (https://spring.io/projects/spring-boot)
 
-==============================================================================<br>
+==============================================================================
+
 VIEWING THE APPLICATION
-==============================================================================<br>
+
+==============================================================================
 - We also have provided a deployed version of our app, with dummy data, that is based on this code.
   Aside from the data, it should run exactly like the local version. Please visit:
   http://cs207-env.eba-jdbxmr3u.us-east-2.elasticbeanstalk.com/
 
-==============================================================================<br>
+==============================================================================
+
 RUNNING THE APPLICATION LOCALLY:
-==============================================================================<br>
+
+==============================================================================
 - This project uses maven.
 - From the phase2 directory (important), run mvnw spring-boot:run or run ./mvnw spring-boot:run (for macOS) to launch the application locally.
   IMPORTANT: You will still need a working internet connection,
@@ -30,9 +36,11 @@ RUNNING THE APPLICATION LOCALLY:
   or you may get a message indicating an IOException, since the ser files won't save.
   (In this extreme circumstance, the message will be logged to application-errors.log)
 
-==============================================================================<br>
+==============================================================================
+
 SEEDING THE APPLICATION WITH DUMMY DATA
-==============================================================================<br>
+
+==============================================================================
 - If you go to the root url, you will see that we have a function to allow you to seed data, or delete data and start again.
   This is for marking purposes only
 - We have added the following accounts, all with PASSWORD 123:
@@ -44,13 +52,17 @@ SEEDING THE APPLICATION WITH DUMMY DATA
 
 
 ==============================================================================
+
 READ ME / UML / COMMENTARY TO AID MARKING:
+
 ==============================================================================
 - We have added README files in relevant packages in the source files in order to explain further our design decisions.
 - We will also have lots of helper text in the actual "View", so you can get a good idea of what the intended consequence of all the settings will be.
 
 ==============================================================================
+
 FEATURES WE HAVE BUILT/CHOSEN FOR PHASE 2
+
 ==============================================================================
 - In the file Phase2Requirements in the same directory, we have added the posted requirements for Phase 2.
 - In addition to the specification for PHASE 1, we have implemented the following:
@@ -80,7 +92,9 @@ PART 3) The following additional features:
 
 
 ==============================================================================
+
 OUTSIDE SOURCES
+
 ==============================================================================
 - All the java code in the java directory is written by our group.
 - We also wrote the views and html, but used a Bootstrap css template (https://bootswatch.com/darkly/, https://bootswatch.com/flatly/ ) and some HTML snippest the bootswatch snippet provides to aid with setting styles.
@@ -89,7 +103,9 @@ OUTSIDE SOURCES
 
 
 ==============================================================================
+
 UTILIZATION OF SPRING-BOOT FRAMEWORK
+
 ==============================================================================
 - We use the Spring-boot framework in a few key areas:
   1) Routing HTTP GET/POST requests to the correct controller methods
@@ -105,7 +121,9 @@ UTILIZATION OF SPRING-BOOT FRAMEWORK
 
 
 ==============================================================================
+
 DESIGN NOTES/DESIGN PATTERNS/SOLID/CLEAN ARCHITECTURE/HOW OUR CODE HAS IMPROVED:
+
 ==============================================================================
 
 1) Dependency Injection:
