@@ -4,60 +4,11 @@ This project is contribuited by Andrew Wang, Weigeng Peng, Xiuyu, Hanchun Wang, 
 
 ==============================================================================
 
-INTRODUCTION
+# INTRODUCTION
 
 ==============================================================================
+
 - This is a web application that relies on the spring-boot framework (https://spring.io/projects/spring-boot)
-
-==============================================================================
-
-VIEWING THE APPLICATION
-
-==============================================================================
-- We also have provided a deployed version of our app, with dummy data, that is based on this code.
-  Aside from the data, it should run exactly like the local version. Please visit:
-  http://cs207-env.eba-jdbxmr3u.us-east-2.elasticbeanstalk.com/
-
-==============================================================================
-
-RUNNING THE APPLICATION LOCALLY:
-
-==============================================================================
-- This project uses maven.
-- From the phase2 directory (important), run mvnw spring-boot:run or run ./mvnw spring-boot:run (for macOS) to launch the application locally.
-  IMPORTANT: You will still need a working internet connection,
-  since we opted to use an AWS EC2 hosted relational database (rather than redis)
-  to save user session data, since it was easier to install.
-- Make sure port 5000 is clear, and go to 127.0.0.1:5000 to view the app in your browser.
-- In terms of persistence of application data, we have opted to stay with our Phase 1 .ser file. This was mostly because
-  the focus of this code is on Java, and we'd prefer spending our time there, and create more features instead of implementing a relational database.
-- The name of the file will be serfileentities.<CLASS NAME>.ser in the Phase2 directory.
-- Please make sure that proper read/write access is available on this directory,
-  or you may get a message indicating an IOException, since the ser files won't save.
-  (In this extreme circumstance, the message will be logged to application-errors.log)
-
-==============================================================================
-
-SEEDING THE APPLICATION WITH DUMMY DATA
-
-==============================================================================
-- If you go to the root url, you will see that we have a function to allow you to seed data, or delete data and start again.
-  This is for marking purposes only
-- We have added the following accounts, all with PASSWORD 123:
-  1@admin.com  --> NOTE THIS IS AN ADMINISTRATOR ACCOUNT
-  1@1.com
-  2@2.com
-  3@3.com
-- The pre-populated data includes the users, some approved items, and an ongoing trade.
-
-
-==============================================================================
-
-READ ME / UML / COMMENTARY TO AID MARKING:
-
-==============================================================================
-- We have added README files in relevant packages in the source files in order to explain further our design decisions.
-- We will also have lots of helper text in the actual "View", so you can get a good idea of what the intended consequence of all the settings will be.
 
 ==============================================================================
 
@@ -136,6 +87,57 @@ READ ME / UML / COMMENTARY TO AID MARKING:
        In other words, we opted to store the "before" and "after" of every action, so that we could revert to the "before" state.
    -   Thus we utilized the "Command Design Pattern", and encapsulated all the actions we want to undo.
    -   Relevant classes: All the classes in the command package.
+
+==============================================================================
+
+VIEWING THE APPLICATION
+
+==============================================================================
+- We also have provided a deployed version of our app, with dummy data, that is based on this code.
+  Aside from the data, it should run exactly like the local version. Please visit:
+  http://cs207-env.eba-jdbxmr3u.us-east-2.elasticbeanstalk.com/
+
+==============================================================================
+
+RUNNING THE APPLICATION LOCALLY:
+
+==============================================================================
+- This project uses maven.
+- From the phase2 directory (important), run mvnw spring-boot:run or run ./mvnw spring-boot:run (for macOS) to launch the application locally.
+  IMPORTANT: You will still need a working internet connection,
+  since we opted to use an AWS EC2 hosted relational database (rather than redis)
+  to save user session data, since it was easier to install.
+- Make sure port 5000 is clear, and go to 127.0.0.1:5000 to view the app in your browser.
+- In terms of persistence of application data, we have opted to stay with our Phase 1 .ser file. This was mostly because
+  the focus of this code is on Java, and we'd prefer spending our time there, and create more features instead of implementing a relational database.
+- The name of the file will be serfileentities.<CLASS NAME>.ser in the Phase2 directory.
+- Please make sure that proper read/write access is available on this directory,
+  or you may get a message indicating an IOException, since the ser files won't save.
+  (In this extreme circumstance, the message will be logged to application-errors.log)
+
+==============================================================================
+
+SEEDING THE APPLICATION WITH DUMMY DATA
+
+==============================================================================
+- If you go to the root url, you will see that we have a function to allow you to seed data, or delete data and start again.
+  This is for marking purposes only
+- We have added the following accounts, all with PASSWORD 123:
+  1@admin.com  --> NOTE THIS IS AN ADMINISTRATOR ACCOUNT
+  1@1.com
+  2@2.com
+  3@3.com
+- The pre-populated data includes the users, some approved items, and an ongoing trade.
+
+
+==============================================================================
+
+READ ME / UML / COMMENTARY TO AID MARKING:
+
+==============================================================================
+- We have added README files in relevant packages in the source files in order to explain further our design decisions.
+- We will also have lots of helper text in the actual "View", so you can get a good idea of what the intended consequence of all the settings will be.
+
 
 
 ==============================================================================
