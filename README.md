@@ -1,6 +1,6 @@
 # Online-Trading-System
 This is the course project for CSC207 in University of Toronto.
-
+This project is contribuited by Andrew Wang, Weigeng Peng, Xiuyu, Hanchun Wang, Ganchu Yao, Zheng Chen, HeiShen
 
 ==============================================================================
 
@@ -61,50 +61,7 @@ READ ME / UML / COMMENTARY TO AID MARKING:
 
 ==============================================================================
 
-FEATURES WE HAVE BUILT/CHOSEN FOR PHASE 2
-
-==============================================================================
-- In the file Phase2Requirements in the same directory, we have added the posted requirements for Phase 2.
-- In addition to the specification for PHASE 1, we have implemented the following:
-
-PART 1) The Mandatory features for Phase 2
-    a) Undo - You can find this functionality when you log in as admin and go to the admin panel.
-    b) Automatically suggest items - You can find this after you launch a trade in the "Browse Avaiable Items" menu.
-       Once you click the permanent or temporary button, you the next page will recommend items you can exchange.
-    c) Demo accounts - You can add demo accounts in the admin panel. When you login as a demo account, none of your actions are recorded.
-    d) Change threshold values - You can adjust these values in the admin panel
-    e) Account status - Go to the account page and pause your account to go on vacation!
-
-PART 2) The 4 following optional extensions
-    a) Allow users to enter their home city when creating an account, so that the system will only show them other users in the same city.
-    b) Create a point system that allows users who has a cumulative points above 1000 then you can borrow as much as you wish.
-    c) Replace your text UI with a Graphic User Interface (GUI). (This counts as two features according to the posted requirements)
-
-PART 3) The following additional features:
-    a) A reporting feature, which allows the administrator to view application-wide analytics, the most popular traded items, the users with the highest credit.
-    b) A tagging feature, which allows items to be associated with tags, and thereby one can filter items by their tag.
-    c) The monetization of the system. i.e. Giving users the option to sell or trade items.
-       (This feature's idea is from the posted requirements for Part 2, but we were told excess Part 2 features can be used for Part 3)
-    d) The user and the admin are able to change their password and home city.
-    e) Cancel transaction option for users
-        (From phase 1, the only way that a transaction will be canceled is when the relevant users has edited more than a certain numbers of times the meeting location/date so we included this option for the user to cancel immediately transaction a transaction that hasn't been agreed to)
-    f) Added ability to swap themes
-
-
-==============================================================================
-
-OUTSIDE SOURCES
-
-==============================================================================
-- All the java code in the java directory is written by our group.
-- We also wrote the views and html, but used a Bootstrap css template (https://bootswatch.com/darkly/, https://bootswatch.com/flatly/ ) and some HTML snippest the bootswatch snippet provides to aid with setting styles.
-- The view is based on a templating engine called Thymeleaf which works closely with Spring-Boot
-- In the <head></head> tags of layout.html, you can see the other references (JQuery, bootstrap, flatpickr etc.)
-
-
-==============================================================================
-
-UTILIZATION OF SPRING-BOOT FRAMEWORK
+# UTILIZATION OF SPRING-BOOT FRAMEWORK
 
 ==============================================================================
 - We use the Spring-boot framework in a few key areas:
@@ -122,7 +79,7 @@ UTILIZATION OF SPRING-BOOT FRAMEWORK
 
 ==============================================================================
 
-DESIGN NOTES/DESIGN PATTERNS/SOLID/CLEAN ARCHITECTURE/HOW OUR CODE HAS IMPROVED:
+# DESIGN NOTES/DESIGN PATTERNS/SOLID/CLEAN ARCHITECTURE/HOW OUR CODE HAS IMPROVED:
 
 ==============================================================================
 
@@ -179,3 +136,48 @@ DESIGN NOTES/DESIGN PATTERNS/SOLID/CLEAN ARCHITECTURE/HOW OUR CODE HAS IMPROVED:
        In other words, we opted to store the "before" and "after" of every action, so that we could revert to the "before" state.
    -   Thus we utilized the "Command Design Pattern", and encapsulated all the actions we want to undo.
    -   Relevant classes: All the classes in the command package.
+
+
+==============================================================================
+
+FEATURES WE HAVE BUILT/CHOSEN FOR PHASE 2
+
+==============================================================================
+- In the file Phase2Requirements in the same directory, we have added the posted requirements for Phase 2.
+- In addition to the specification for PHASE 1, we have implemented the following:
+
+PART 1) The Mandatory features for Phase 2
+    a) Undo - You can find this functionality when you log in as admin and go to the admin panel.
+    b) Automatically suggest items - You can find this after you launch a trade in the "Browse Avaiable Items" menu.
+       Once you click the permanent or temporary button, you the next page will recommend items you can exchange.
+    c) Demo accounts - You can add demo accounts in the admin panel. When you login as a demo account, none of your actions are recorded.
+    d) Change threshold values - You can adjust these values in the admin panel
+    e) Account status - Go to the account page and pause your account to go on vacation!
+
+PART 2) The 4 following optional extensions
+    a) Allow users to enter their home city when creating an account, so that the system will only show them other users in the same city.
+    b) Create a point system that allows users who has a cumulative points above 1000 then you can borrow as much as you wish.
+    c) Replace your text UI with a Graphic User Interface (GUI). (This counts as two features according to the posted requirements)
+
+PART 3) The following additional features:
+    a) A reporting feature, which allows the administrator to view application-wide analytics, the most popular traded items, the users with the highest credit.
+    b) A tagging feature, which allows items to be associated with tags, and thereby one can filter items by their tag.
+    c) The monetization of the system. i.e. Giving users the option to sell or trade items.
+       (This feature's idea is from the posted requirements for Part 2, but we were told excess Part 2 features can be used for Part 3)
+    d) The user and the admin are able to change their password and home city.
+    e) Cancel transaction option for users
+        (From phase 1, the only way that a transaction will be canceled is when the relevant users has edited more than a certain numbers of times the meeting location/date so we included this option for the user to cancel immediately transaction a transaction that hasn't been agreed to)
+    f) Added ability to swap themes
+
+
+==============================================================================
+
+OUTSIDE SOURCES
+
+==============================================================================
+- All the java code in the java directory is written by our group.
+- We also wrote the views and html, but used a Bootstrap css template (https://bootswatch.com/darkly/, https://bootswatch.com/flatly/ ) and some HTML snippest the bootswatch snippet provides to aid with setting styles.
+- The view is based on a templating engine called Thymeleaf which works closely with Spring-Boot
+- In the <head></head> tags of layout.html, you can see the other references (JQuery, bootstrap, flatpickr etc.)
+
+
