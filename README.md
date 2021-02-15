@@ -2,21 +2,21 @@
 This is the course project for CSC207 in University of Toronto.
 
 
-==============================================================================
+==============================================================================<br>
 INTRODUCTION
-==============================================================================
+==============================================================================<br>
 - This is a web application that relies on the spring-boot framework (https://spring.io/projects/spring-boot)
 
-==============================================================================
+==============================================================================<br>
 VIEWING THE APPLICATION
-==============================================================================
+==============================================================================<br>
 - We also have provided a deployed version of our app, with dummy data, that is based on this code.
   Aside from the data, it should run exactly like the local version. Please visit:
   http://cs207-env.eba-jdbxmr3u.us-east-2.elasticbeanstalk.com/
 
-==============================================================================
+==============================================================================<br>
 RUNNING THE APPLICATION LOCALLY:
-==============================================================================
+==============================================================================<br>
 - This project uses maven.
 - From the phase2 directory (important), run mvnw spring-boot:run or run ./mvnw spring-boot:run (for macOS) to launch the application locally.
   IMPORTANT: You will still need a working internet connection,
@@ -30,9 +30,9 @@ RUNNING THE APPLICATION LOCALLY:
   or you may get a message indicating an IOException, since the ser files won't save.
   (In this extreme circumstance, the message will be logged to application-errors.log)
 
-==============================================================================
+==============================================================================<br>
 SEEDING THE APPLICATION WITH DUMMY DATA
-==============================================================================
+==============================================================================<br>
 - If you go to the root url, you will see that we have a function to allow you to seed data, or delete data and start again.
   This is for marking purposes only
 - We have added the following accounts, all with PASSWORD 123:
