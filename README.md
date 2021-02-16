@@ -1,5 +1,6 @@
 # Online-Trading-System
-This is the course project for CSC207 in University of Toronto.
+This is the course project for the course Software Design (CSC207) in University of Toronto.
+
 This project is contribuited by Andrew Wang, Weigeng Peng, Xiuyu, Hanchun Wang, Ganchu Yao, Zheng Chen, HeiShen
 
 ==============================================================================
